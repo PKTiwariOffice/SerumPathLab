@@ -635,6 +635,13 @@
     if (e.key === 'Escape' && mobileDrawer.classList.contains('is-open')) closeDrawer();
   });
 
+  if (window.matchMedia) {
+    var desktopQuery = window.matchMedia('(min-width: 1024px)');
+    var onDesktopChange = function (e) { if (e.matches) closeDrawer(); };
+    if (desktopQuery.addEventListener) desktopQuery.addEventListener('change', onDesktopChange);
+    else if (desktopQuery.addListener) desktopQuery.addListener(onDesktopChange);
+  }
+
   /* Active nav link on scroll (desktop + drawer) */
   var sections = ['home', 'tests', 'packages', 'prescription', 'reviews', 'faq', 'contact'].map(function (id) {
     return document.getElementById(id);
