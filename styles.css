@@ -1094,12 +1094,9 @@ svg { flex-shrink: 0; }
   .announce-inner { justify-content: center; gap: 12px; }
   .announce-call { display: inline-flex; }
 
-  /* Compact brand + download button for mobile header */
+  /* Compact brand + nav toggle for mobile header */
   .header-inner { min-height: 64px; }
   .brand-logo, .mobile-actions { flex-shrink: 0; }
-  .mobile-download { padding: 9px 12px; font-size: 13px; }
-
-  .mobile-download-icon { display: none; }
 
   .booking-card { padding: 26px 20px 22px; }
   .field-row { grid-template-columns: 1fr; gap: 0; }
@@ -1121,9 +1118,6 @@ svg { flex-shrink: 0; }
 
 @media (max-width: 400px) {
   .brand-text { display: none; }
-  .mobile-download-text { display: none; }
-  .mobile-download-icon { display: block; }
-  .mobile-download { padding: 11px; border-radius: 10px; }
 }
 
 @media (max-width: 420px) {
